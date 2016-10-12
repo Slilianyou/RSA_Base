@@ -15,6 +15,10 @@
 		7B1184B51DACDCA7008A9600 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1184B31DACDCA7008A9600 /* LaunchScreen.storyboard */; };
 		7B1184C01DACDCA7008A9600 /* RSA_BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1184BF1DACDCA7008A9600 /* RSA_BaseTests.m */; };
 		7B1184CB1DACDCA7008A9600 /* RSA_BaseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1184CA1DACDCA7008A9600 /* RSA_BaseUITests.m */; };
+		7B1184DA1DACDEFB008A9600 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1184D91DACDEFB008A9600 /* Security.framework */; };
+		7B1184E51DACE662008A9600 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1184E41DACE662008A9600 /* RSAEncryptor.m */; };
+		7B1184E71DACEA43008A9600 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 7B1184E61DACEA43008A9600 /* public_key.der */; };
+		7B1184E91DADD153008A9600 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1184E81DADD153008A9600 /* private_key.p12 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,11 @@
 		7B1184C61DACDCA7008A9600 /* RSA_BaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSA_BaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1184CA1DACDCA7008A9600 /* RSA_BaseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSA_BaseUITests.m; sourceTree = "<group>"; };
 		7B1184CC1DACDCA7008A9600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B1184D91DACDEFB008A9600 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7B1184E31DACE662008A9600 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		7B1184E41DACE662008A9600 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		7B1184E61DACEA43008A9600 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		7B1184E81DADD153008A9600 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1184DA1DACDEFB008A9600 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 				7B1184BE1DACDCA7008A9600 /* RSA_BaseTests */,
 				7B1184C91DACDCA7008A9600 /* RSA_BaseUITests */,
 				7B1184A31DACDCA7008A9600 /* Products */,
+				7B1184D81DACDEFA008A9600 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +112,10 @@
 		7B1184A41DACDCA7008A9600 /* RSA_Base */ = {
 			isa = PBXGroup;
 			children = (
+				7B1184E81DADD153008A9600 /* private_key.p12 */,
+				7B1184E61DACEA43008A9600 /* public_key.der */,
+				7B1184DD1DACE0F8008A9600 /* RSAEncryptor */,
+				7B1184DB1DACDF1B008A9600 /* Libs */,
 				7B1184A81DACDCA7008A9600 /* AppDelegate.h */,
 				7B1184A91DACDCA7008A9600 /* AppDelegate.m */,
 				7B1184AB1DACDCA7008A9600 /* ViewController.h */,
@@ -138,6 +153,30 @@
 				7B1184CC1DACDCA7008A9600 /* Info.plist */,
 			);
 			path = RSA_BaseUITests;
+			sourceTree = "<group>";
+		};
+		7B1184D81DACDEFA008A9600 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B1184D91DACDEFB008A9600 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B1184DB1DACDF1B008A9600 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		7B1184DD1DACE0F8008A9600 /* RSAEncryptor */ = {
+			isa = PBXGroup;
+			children = (
+				7B1184E31DACE662008A9600 /* RSAEncryptor.h */,
+				7B1184E41DACE662008A9600 /* RSAEncryptor.m */,
+			);
+			path = RSAEncryptor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +290,8 @@
 			files = (
 				7B1184B51DACDCA7008A9600 /* LaunchScreen.storyboard in Resources */,
 				7B1184B21DACDCA7008A9600 /* Assets.xcassets in Resources */,
+				7B1184E71DACEA43008A9600 /* public_key.der in Resources */,
+				7B1184E91DADD153008A9600 /* private_key.p12 in Resources */,
 				7B1184B01DACDCA7008A9600 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B1184AD1DACDCA7008A9600 /* ViewController.m in Sources */,
+				7B1184E51DACE662008A9600 /* RSAEncryptor.m in Sources */,
 				7B1184AA1DACDCA7008A9600 /* AppDelegate.m in Sources */,
 				7B1184A71DACDCA7008A9600 /* main.m in Sources */,
 			);
@@ -514,6 +556,7 @@
 				7B1184D11DACDCA7008A9600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B1184D21DACDCA7008A9600 /* Build configuration list for PBXNativeTarget "RSA_BaseTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +565,7 @@
 				7B1184D41DACDCA7008A9600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B1184D51DACDCA7008A9600 /* Build configuration list for PBXNativeTarget "RSA_BaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +574,7 @@
 				7B1184D71DACDCA7008A9600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
